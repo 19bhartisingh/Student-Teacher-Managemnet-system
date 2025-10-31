@@ -1,0 +1,101 @@
+{% extends 'classroom/base.html' %}
+{% load static %}
+{% block content %}
+
+{% if messages %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  {% for message in messages %}
+    <div class="alert {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{ message|safe }}</div>
+  {% endfor %}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+
+<div class="banner">
+      <img src="{% static 'images/Firstimg.PNG' %}" alt="">
+      <div class="content">
+        <h1>Student Management System</h1>
+        <p>Student-Teacher</p>
+      </div>
+    </div>
+
+    <div class="about">
+      <h1>About Us</h1>
+      <p>Student Management System is a student-teacher portal with various classroom features like uploading assignments, submissions, Class Notice and many more. Students and Teacher can login in the portal and can experience interactive classroom experience online.
+      One of the most powerful features of class manager is its student managing abilities. Teacher can easily manage their students and keep them updated about all of the activities in class.</p>
+    </div>
+
+    <div class="use-content">
+      <h1>Our Services</h1>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="box">
+            <div class="imgBx">
+              <img src="{% static 'images/Teachernewimg.PNG' %}" alt="">
+            </div>
+            <div class="content">
+              <h3>For Teacher</h3>
+             <ol>
+                <li>Teachers can enroll students into their class using the Add Student feature.</li>
+                <li>Once students are added, teachers can assign or update their marks for the class.</li>
+                <li>Teachers can create and send notices that will reach all students in their class.</li>
+                <li>Assignments can be uploaded by teachers using the Upload Assignment option.</li>
+                <li>Teachers can review submitted assignments and assign marks accordingly.</li>
+                <li>Students can send messages directly to teachers, which are received in the teacher's Inbox.</li>
+                <li>Teachers can view all marks given to a student through the Marks profile and make edits if necessary.</li>
+                <li>Users can personalize their account by uploading a profile picture via the Edit Profile option.</li>
+              </ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="box">
+            <div class="imgBx">
+              <img src="{% static 'images/Home.PNG' %}" alt="">
+            </div>
+            <div class="content">
+              <h3>For Student</h3>
+             <ol>
+                <li>Students can log into the portal to stay informed about all ongoing class activities and updates.</li>
+                <li>Important announcements from teachers are available in the Class Notice section.</li>
+                <li>Students can download assignments from the Assignments tab and upload their completed work there. (Note: Once submitted, assignments cannot be modified.)</li>
+                <li>Through the All Teachers List, students can send messages to any teacher for queries or guidance.</li>
+                <li>Marks and performance details can be viewed under the Marks section.</li>
+                <li>Students can personalize their account by uploading a profile picture in the Edit Profile section.</li>
+              </ol>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="research">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'images/Education.png' %}" alt="">
+        </div>
+        <div class="col-md-8">
+          <div class="digital-content">
+            <h2>Digital Learning</h2>
+            <br>
+            <p>We surveyed over 16,000 teachers and administrators to better understand the state of digital learning. Class Manager provides all facilities that is needed for improvising digital learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="social">
+      <h1>Ready to take learning to the next level? Let’s transform education together.</h1>
+      <h3>Connect with us on social media.</h3>
+      <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-google"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+{% endblock %}
